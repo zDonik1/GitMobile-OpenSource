@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:git_mobile/ui/pages/home_widgets/add_repo.dart';
+import 'package:git_mobile/ui/pages/home_widgets/profile.dart';
 import 'package:git_mobile/ui/pages/home_widgets/repos.dart';
 import 'package:git_mobile/ui/resources/app_colors.dart';
 
@@ -9,9 +11,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  Text _appBarTitle = _navigationBarItems[0].title;
 
-  Repos reposWidget = Repos();
+  Widget _selectedWidget = ReposWidget();
 
   static const List<BottomNavigationBarItem> _navigationBarItems =
       <BottomNavigationBarItem>[
@@ -31,24 +32,34 @@ class _HomePageState extends State<HomePage> {
 
   void _onItemTapped(int index) {
     setState(() {
-      _appBarTitle = _navigationBarItems[index].title;
       _selectedIndex = index;
+
+      switch (index) {
+        case 0:
+          _selectedWidget = ReposWidget();
+          break;
+        case 1:
+          _selectedWidget = AddRepoWidget();
+          break;
+        case 2:
+          _selectedWidget = ProfileWidget();
+          break;
+        default:
+          break;
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: _appBarTitle,
-      ),
       bottomNavigationBar: BottomNavigationBar(
         items: _navigationBarItems,
         currentIndex: _selectedIndex,
         selectedItemColor: AppColors.gitHubSelectedItemColor,
         onTap: _onItemTapped,
       ),
-      body: reposWidget,
+      body: _selectedWidget,
     );
   }
 }

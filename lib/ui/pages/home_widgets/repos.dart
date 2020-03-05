@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:floating_search_bar/floating_search_bar.dart';
 
-class Repos extends StatefulWidget {
+class ReposWidget extends StatefulWidget {
   @override
-  _ReposState createState() => _ReposState();
+  _ReposWidgetState createState() => _ReposWidgetState();
 }
 
-class _ReposState extends State<Repos> {
+class _ReposWidgetState extends State<ReposWidget> {
   Widget _buildList() => ListView(
         children: [
           _tile('RxSwift', 'RxSwiftCommunity', Icons.account_box),
@@ -37,10 +36,11 @@ class _ReposState extends State<Repos> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        _buildList(),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Repos'),
+      ),
+      body: _buildList(),
     );
   }
 }
