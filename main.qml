@@ -24,16 +24,18 @@ ApplicationWindow {
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
 
-        PageView {
+        ReposPageView {
             name: "Repositories"
         }
 
         PageView {
             name: "Create repository"
+            isTemplate: true
         }
 
         PageView {
             name: "This is your profile"
+            isTemplate: true
         }
     }
 

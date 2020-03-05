@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>Style.qml</file>
         <file>qmldir</file>
+        <file>icons/book.svg</file>
     </qresource>
 </RCC>

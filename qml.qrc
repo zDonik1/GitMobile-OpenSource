@@ -4,5 +4,7 @@
         <file>PageView.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>IconTabButton.qml</file>
+        <file>ReposPageView.qml</file>
+        <file>RepoDelegate.qml</file>
     </qresource>
 </RCC>
