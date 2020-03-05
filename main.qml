@@ -8,11 +8,6 @@ ApplicationWindow {
     title: qsTr("Tabs")
 
     header: Rectangle {
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
         height: 70
         color: Style.navBarBackgroundColor
 
@@ -44,10 +39,6 @@ ApplicationWindow {
 
     footer: TabBar {
         id: tabBar
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
         currentIndex: swipeView.currentIndex
 
         IconTabButton {
