@@ -3,8 +3,8 @@ import QtQuick.Controls 2.14
 
 ApplicationWindow {
     visible: true
-    width: 400
-    height: 640
+    width: 380
+    height: 680
     title: qsTr("Tabs")
 
     header: Rectangle {
@@ -33,9 +33,8 @@ ApplicationWindow {
             isTemplate: true
         }
 
-        PageView {
-            name: "This is your profile"
-            isTemplate: true
+        ProfilePageView {
+            name: "My Profile"
         }
     }
 

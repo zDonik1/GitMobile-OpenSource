@@ -6,5 +6,6 @@
         <file>IconTabButton.qml</file>
         <file>ReposPageView.qml</file>
         <file>RepoDelegate.qml</file>
+        <file>ProfilePageView.qml</file>
     </qresource>
 </RCC>
