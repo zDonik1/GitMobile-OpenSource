@@ -15,15 +15,15 @@ Item {
 
     // RepoDelegate
     property color repoDelegateBorderColor: Material.foreground
-    property int repoDelegatePadding: 15
+    property int repoDelegatePadding: 12
     property int repoDelegateBorderHeight: 1
 
     property color repoDelegateNameColor: Material.foreground
+    property int repoDelegateNameTextSize: 20
+
     property color repoDelegateDescriptionColor: Qt.lighter(Material.foreground)
+    property int repoDelegateDescriptionTextSize: 16
 
-    property int repoDelegateNameTextSize: 16
-    property int repoDelegateDescriptionTextSize: 12
-
-    property int repoDelegateIconSize: 20
+    property int repoDelegateIconSize: 25
     property color repoDelegateIconColor: Material.foreground
 }

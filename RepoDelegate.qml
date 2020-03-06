@@ -5,8 +5,9 @@ Item {
     property string repoName: "SET REPO NAME"
     property string repoDescription: "SET REPO DESCRIPTION"
 
-    height: (content.height > imageHolder.height
-             ? content.height : imageHolder.height) + Style.repoDelegatePadding
+    height: (content.height > icon.height
+             ? content.height : icon.height)
+            + Style.repoDelegatePadding * 2
     anchors {
         left: parent.left
         right: parent.right
@@ -15,7 +16,7 @@ Item {
     Item {
         id: imageHolder
         anchors.verticalCenter: parent.verticalCenter
-        height: icon.height + Style.repoDelegatePadding
+        height: parent.height
         width: height
 
         Image {
@@ -38,7 +39,6 @@ Item {
         anchors {
             verticalCenter: parent.verticalCenter
             left: imageHolder.right
-            leftMargin: Style.repoDelegatePadding
         }
         height: textName.height + textName.height
 
@@ -57,15 +57,5 @@ Item {
             color: Style.repoDelegateDescriptionColor
             font.pixelSize: Style.repoDelegateDescriptionTextSize
         }
-    }
-
-    Rectangle {
-        anchors {
-            bottom: parent.bottom
-            horizontalCenter: parent.horizontalCenter
-        }
-        width: parent.width - 30
-        height: Style.repoDelegateBorderHeight
-        color: Style.repoDelegateBorderColor
     }
 }
