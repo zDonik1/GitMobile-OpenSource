@@ -10,7 +10,7 @@ class _AddRepoWidgetState extends State<AddRepoWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Repo'),
+        title: Text('My Repos'),
       ),
     );
   }

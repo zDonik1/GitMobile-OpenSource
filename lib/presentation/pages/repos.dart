@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_mobile/presentation/widgets/search_widget.dart';
 
 class ReposWidget extends StatefulWidget {
   @override
@@ -6,6 +7,11 @@ class ReposWidget extends StatefulWidget {
 }
 
 class _ReposWidgetState extends State<ReposWidget> {
+  // State
+  bool _isSearching = false;
+  double _searchTextFieldOpacity = 0.0;
+  double _titleOpacity = 1.0;
+
   Widget _buildList() => ListView(
         children: [
           _tile('RxSwift', 'RxSwiftCommunity', Icons.account_box),
@@ -34,11 +40,50 @@ class _ReposWidgetState extends State<ReposWidget> {
         ),
       );
 
+  void _onSearchPressed() {
+    print('Search Tapped');
+    setState(() {
+      _searchTextFieldOpacity = 1.0;
+      _titleOpacity = 0.0;
+      _isSearching = true;
+    });
+  }
+
+  void _onCancelPressed() {
+    print('Cancel Tapped');
+    setState(() {
+      _searchTextFieldOpacity = 0.0;
+      _titleOpacity = 1.0;
+      _isSearching = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Repos'),
+        title: AnimatedCrossFade(
+          duration: Duration(milliseconds: 100),
+          firstChild: SearchBox('Repository name', Colors.white),
+          secondChild: Text('Search '
+              'Repositories'),
+          crossFadeState: _isSearching
+              ? CrossFadeState.showFirst
+              : CrossFadeState.showSecond,
+        ),
+        actions: <Widget>[
+          _isSearching
+              ? IconButton(
+                  icon: Icon(Icons.cancel),
+                  color: Colors.white,
+                  onPressed: _onCancelPressed,
+                )
+              : IconButton(
+                  icon: Icon(Icons.search),
+                  color: Colors.white,
+                  onPressed: _onSearchPressed,
+                ),
+        ],
       ),
       body: _buildList(),
     );

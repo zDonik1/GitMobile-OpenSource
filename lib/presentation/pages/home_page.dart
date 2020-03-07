@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:git_mobile/ui/pages/home_widgets/add_repo.dart';
-import 'package:git_mobile/ui/pages/home_widgets/profile.dart';
-import 'package:git_mobile/ui/pages/home_widgets/repos.dart';
-import 'package:git_mobile/ui/resources/app_colors.dart';
+import 'package:git_mobile/presentation/pages/my_repos.dart';
+import 'package:git_mobile/presentation/pages/profile.dart';
+import 'package:git_mobile/presentation/pages/repos.dart';
+import 'package:git_mobile/presentation/constants/app_colors.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,8 +21,8 @@ class _HomePageState extends State<HomePage> {
       title: Text('Repos'),
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.add),
-      title: Text('Create Repo'),
+      icon: Icon(Icons.view_list),
+      title: Text('My Repos'),
     ),
     BottomNavigationBarItem(
       icon: Icon(Icons.account_circle),
