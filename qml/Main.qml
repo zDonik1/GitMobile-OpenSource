@@ -33,13 +33,17 @@ App {
     }
 
     onInitTheme: {
+        Theme.colors.backgroundColor = Material.background
+        Theme.colors.disclosureColor = Material.background
+        Theme.colors.tintColor = Material.accent
+
+        Theme.navigationBar.backgroundColor = Material.foreground
+        Theme.navigationBar.titleColor = "white"
+
         Theme.tabBar.titleColor = Material.accent
         Theme.tabBar.backgroundColor = Material.background
         Theme.tabBar.showIcon = true
         Theme.tabBar.titleOffColor = Material.foreground
-
-        Theme.colors.backgroundColor = Material.background
-        Theme.colors.tintColor = Material.foreground
     }
 
     // business logic
