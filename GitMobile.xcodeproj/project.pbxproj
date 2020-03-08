@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CC97EAD2414D12C00F8A227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EAC2414D12C00F8A227 /* AppDelegate.swift */; };
+		1CC97EB12414D12C00F8A227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EB02414D12C00F8A227 /* ViewController.swift */; };
+		1CC97EB62414D12E00F8A227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC97EB52414D12E00F8A227 /* Assets.xcassets */; };
+		1CC97EB92414D12E00F8A227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC97EB72414D12E00F8A227 /* LaunchScreen.storyboard */; };
+		DB8F58E3BC662F1A486D3031 /* Pods_GitMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885BA6440F87E29D55D8E954 /* Pods_GitMobile.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A6C67710A838D6567418D04 /* Pods-GitMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitMobile.debug.xcconfig"; path = "Target Support Files/Pods-GitMobile/Pods-GitMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		1CC97EA92414D12C00F8A227 /* GitMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CC97EAC2414D12C00F8A227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1CC97EB02414D12C00F8A227 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1CC97EB52414D12E00F8A227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CC97EB82414D12E00F8A227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1CC97EBA2414D12E00F8A227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885BA6440F87E29D55D8E954 /* Pods_GitMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31BBFF8F438B3A61D47989C /* Pods-GitMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitMobile.release.xcconfig"; path = "Target Support Files/Pods-GitMobile/Pods-GitMobile.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CC97EA62414D12C00F8A227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8F58E3BC662F1A486D3031 /* Pods_GitMobile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CC97EA02414D12C00F8A227 = {
+			isa = PBXGroup;
+			children = (
+				1CC97EAB2414D12C00F8A227 /* GitMobile */,
+				1CC97EAA2414D12C00F8A227 /* Products */,
+				FB9ABC96CDFC250D1AABDFC3 /* Pods */,
+				FDE207229C9CBEF1DBE44672 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1CC97EAA2414D12C00F8A227 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EA92414D12C00F8A227 /* GitMobile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CC97EAB2414D12C00F8A227 /* GitMobile */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EC42414D5C700F8A227 /* App Layer */,
+				1CC97EC32414D5C200F8A227 /* Core Layer */,
+				1CC97EC22414D59900F8A227 /* Data Layer */,
+				1CC97EC12414D59400F8A227 /* UI Layer */,
+				1CC97EC02414D13600F8A227 /* Supporting Files */,
+			);
+			path = GitMobile;
+			sourceTree = "<group>";
+		};
+		1CC97EC02414D13600F8A227 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EB52414D12E00F8A227 /* Assets.xcassets */,
+				1CC97EB72414D12E00F8A227 /* LaunchScreen.storyboard */,
+				1CC97EBA2414D12E00F8A227 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CC97EC12414D59400F8A227 /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EB02414D12C00F8A227 /* ViewController.swift */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
+		1CC97EC22414D59900F8A227 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		1CC97EC32414D5C200F8A227 /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		1CC97EC42414D5C700F8A227 /* App Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EAC2414D12C00F8A227 /* AppDelegate.swift */,
+			);
+			path = "App Layer";
+			sourceTree = "<group>";
+		};
+		FB9ABC96CDFC250D1AABDFC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A6C67710A838D6567418D04 /* Pods-GitMobile.debug.xcconfig */,
+				C31BBFF8F438B3A61D47989C /* Pods-GitMobile.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FDE207229C9CBEF1DBE44672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				885BA6440F87E29D55D8E954 /* Pods_GitMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CC97EA82414D12C00F8A227 /* GitMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CC97EBD2414D12E00F8A227 /* Build configuration list for PBXNativeTarget "GitMobile" */;
+			buildPhases = (
+				79CAC73771EEB5460DD0CDDF /* [CP] Check Pods Manifest.lock */,
+				1CC97EA52414D12C00F8A227 /* Sources */,
+				1CC97EA62414D12C00F8A227 /* Frameworks */,
+				1CC97EA72414D12C00F8A227 /* Resources */,
+				69C2817E540BAFE088C90051 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitMobile;
+			productName = GitMobile;
+			productReference = 1CC97EA92414D12C00F8A227 /* GitMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CC97EA12414D12C00F8A227 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Zafar;
+				TargetAttributes = {
+					1CC97EA82414D12C00F8A227 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 1CC97EA42414D12C00F8A227 /* Build configuration list for PBXProject "GitMobile" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CC97EA02414D12C00F8A227;
+			productRefGroup = 1CC97EAA2414D12C00F8A227 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CC97EA82414D12C00F8A227 /* GitMobile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CC97EA72414D12C00F8A227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CC97EB92414D12E00F8A227 /* LaunchScreen.storyboard in Resources */,
+				1CC97EB62414D12E00F8A227 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69C2817E540BAFE088C90051 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitMobile/Pods-GitMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitMobile/Pods-GitMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitMobile/Pods-GitMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79CAC73771EEB5460DD0CDDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CC97EA52414D12C00F8A227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CC97EB12414D12C00F8A227 /* ViewController.swift in Sources */,
+				1CC97EAD2414D12C00F8A227 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1CC97EB72414D12E00F8A227 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CC97EB82414D12E00F8A227 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CC97EBB2414D12E00F8A227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1CC97EBC2414D12E00F8A227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CC97EBE2414D12E00F8A227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A6C67710A838D6567418D04 /* Pods-GitMobile.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MJWVGRX9VD;
+				INFOPLIST_FILE = "GitMobile/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zafar.GitMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CC97EBF2414D12E00F8A227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C31BBFF8F438B3A61D47989C /* Pods-GitMobile.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MJWVGRX9VD;
+				INFOPLIST_FILE = "GitMobile/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zafar.GitMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CC97EA42414D12C00F8A227 /* Build configuration list for PBXProject "GitMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CC97EBB2414D12E00F8A227 /* Debug */,
+				1CC97EBC2414D12E00F8A227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CC97EBD2414D12E00F8A227 /* Build configuration list for PBXNativeTarget "GitMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CC97EBE2414D12E00F8A227 /* Debug */,
+				1CC97EBF2414D12E00F8A227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CC97EA12414D12C00F8A227 /* Project object */;
+}
