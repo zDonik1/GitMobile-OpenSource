@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>Style.qml</file>
-        <file>qmldir</file>
-        <file>icons/book.svg</file>
-        <file>assets/myprofile.jpg</file>
-    </qresource>
-</RCC>
