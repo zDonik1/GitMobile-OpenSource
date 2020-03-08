@@ -1,3 +1,5 @@
+QT += svg
+
 # allows to add DEPLOYMENTFOLDERS and links to the Felgo library and QtCreator auto-completion
 CONFIG += felgo
 
@@ -25,7 +27,7 @@ DEPLOYMENTFOLDERS += assetsFolder
 
 # Add more folders to ship with the application here
 
-RESOURCES += #    resources.qrc # uncomment for publishing
+RESOURCES += resources.qrc # uncomment for publishing
 
 # NOTE: for PUBLISHING, perform the following steps:
 # 1. comment the DEPLOYMENTFOLDERS += qmlFolder line above, to avoid shipping your qml files with the application (instead they get compiled to the app binary)
@@ -58,3 +60,7 @@ win32 {
 macx {
     ICON = macx/app_icon.icns
 }
+
+DISTFILES += \
+    qml/components/RepoDelegate.qml \
+    qml/pages/ReposListPage.qml

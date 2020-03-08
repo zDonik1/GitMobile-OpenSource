@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>qtquickcontrols2.conf</file>
+        <file>assets/github_placeholder.png</file>
+        <file>assets/repo.svg</file>
     </qresource>
 </RCC>

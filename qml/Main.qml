@@ -4,6 +4,7 @@ import QtQuick.Controls.Material 2.12
 import "model"
 import "logic"
 import "pages"
+import "components"
 
 
 App {
@@ -33,6 +34,7 @@ App {
     }
 
     onInitTheme: {
+        Theme.colors.textColor = Material.foreground
         Theme.colors.backgroundColor = Material.background
         Theme.colors.disclosureColor = Material.background
         Theme.colors.tintColor = Material.accent
@@ -78,32 +80,12 @@ App {
             icon: IconType.search
 
             NavigationStack {
-                ListPage {
-                    id: listPage
+                ReposListPage {
                     title: qsTr("Repositories")
-                    showSearch: true
-
-                    delegate: SimpleRow {
-                        iconSource: IconType.book
-                        style: StyleSimpleRow {
-                            dividerHeight: 0
-                        }
+                    delegate: RepoDelegate {
+                        imageSource: Qt.resolvedUrl("../assets/github_placeholder.png")
+                        imageSize: dp(35)
                     }
-
-                    model: [
-                        {
-                            text: "Some C++ repo",
-                            detailText: "Trying to experiment new C++ features"
-                        },
-                        {
-                            text: "Learning Qt Quick",
-                            detailText: "Project showcasing Qt Quick features"
-                        },
-                        {
-                            text: "Mobile github on Felgo",
-                            detailText: "Making github service for mobile devices"
-                        }
-                    ]
                 }
             }
         }
@@ -112,10 +94,13 @@ App {
             title: qsTr("My Repos")
             icon: IconType.list
 
-
             NavigationStack {
-                Page {
+                ReposListPage {
                     title: qsTr("My Repositories")
+                    delegate: RepoDelegate {
+                        imageSource: Qt.resolvedUrl("../assets/repo.svg")
+                        imageSize: dp(25)
+                    }
                 }
 
                 // login page lies on top of previous items and overlays if user is not logged in
