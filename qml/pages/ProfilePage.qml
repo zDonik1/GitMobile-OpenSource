@@ -6,7 +6,11 @@ Page {
     signal logoutClicked
 
     AppButton {
-        anchors.centerIn: parent
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            bottom: parent.bottom
+            bottomMargin: dp(30)
+        }
         text: qsTr("Logout")
         onClicked: logoutClicked()
     }
