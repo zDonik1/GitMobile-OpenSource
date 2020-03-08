@@ -7,21 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5DAED02414FFFB00BCF665 /* SearchRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5DAECF2414FFFB00BCF665 /* SearchRepositoriesResponse.swift */; };
+		1C5DAED22415027400BCF665 /* SearchRepositoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5DAED12415027400BCF665 /* SearchRepositoriesRepository.swift */; };
+		1C5DAED824151DE300BCF665 /* KingfisherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5DAED724151DE300BCF665 /* KingfisherService.swift */; };
+		1C5DAEDA24151FCF00BCF665 /* ImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5DAED924151FCF00BCF665 /* ImageDataService.swift */; };
 		1CC97EAD2414D12C00F8A227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EAC2414D12C00F8A227 /* AppDelegate.swift */; };
-		1CC97EB12414D12C00F8A227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EB02414D12C00F8A227 /* ViewController.swift */; };
 		1CC97EB62414D12E00F8A227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC97EB52414D12E00F8A227 /* Assets.xcassets */; };
 		1CC97EB92414D12E00F8A227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC97EB72414D12E00F8A227 /* LaunchScreen.storyboard */; };
+		1CC97EC82414D79200F8A227 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EC72414D79200F8A227 /* TabBarController.swift */; };
+		1CC97ECA2414D7BB00F8A227 /* SearchRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EC92414D7BB00F8A227 /* SearchRepositoriesViewController.swift */; };
+		1CC97ECC2414D7C700F8A227 /* MyRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97ECB2414D7C700F8A227 /* MyRepositoriesViewController.swift */; };
+		1CC97ECE2414D7CF00F8A227 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97ECD2414D7CE00F8A227 /* ProfileViewController.swift */; };
+		1CC97ED02414D8A200F8A227 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97ECF2414D8A200F8A227 /* AppNavigationController.swift */; };
+		1CC97ED42414D91C00F8A227 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97ED32414D91C00F8A227 /* Colors.swift */; };
+		1CC97ED62414D97500F8A227 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97ED52414D97500F8A227 /* Extensions.swift */; };
+		1CC97EDC2414DD2100F8A227 /* SearchRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EDB2414DD2100F8A227 /* SearchRepositoriesView.swift */; };
+		1CC97EDE2414E03700F8A227 /* MyRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EDD2414E03700F8A227 /* MyRepositoriesView.swift */; };
+		1CC97EE02414E04100F8A227 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EDF2414E04100F8A227 /* ProfileView.swift */; };
+		1CC97EE22414E3AF00F8A227 /* SearchRepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EE12414E3AF00F8A227 /* SearchRepositoriesViewModel.swift */; };
+		1CC97EEA2414E4AF00F8A227 /* MyRepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EE92414E4AF00F8A227 /* MyRepositoriesViewModel.swift */; };
+		1CC97EEC2414E4FB00F8A227 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EEB2414E4FB00F8A227 /* ProfileViewModel.swift */; };
+		1CC97EF02414EA0F00F8A227 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EEF2414EA0F00F8A227 /* RepositoryTableViewCell.swift */; };
+		1CC97EF22414EB9C00F8A227 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EF12414EB9C00F8A227 /* Font.swift */; };
+		1CC97EF62414ED7400F8A227 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EF52414ED7400F8A227 /* RepositoryViewModel.swift */; };
+		1CC97EF82414F1DB00F8A227 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EF72414F1DB00F8A227 /* NetworkClient.swift */; };
+		1CC97EFA2414F21300F8A227 /* BaseURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EF92414F21300F8A227 /* BaseURLs.swift */; };
+		1CC97EFC2414F90900F8A227 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC97EFB2414F90900F8A227 /* Endpoints.swift */; };
 		DB8F58E3BC662F1A486D3031 /* Pods_GitMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885BA6440F87E29D55D8E954 /* Pods_GitMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A6C67710A838D6567418D04 /* Pods-GitMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitMobile.debug.xcconfig"; path = "Target Support Files/Pods-GitMobile/Pods-GitMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		1C5DAECF2414FFFB00BCF665 /* SearchRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesResponse.swift; sourceTree = "<group>"; };
+		1C5DAED12415027400BCF665 /* SearchRepositoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesRepository.swift; sourceTree = "<group>"; };
+		1C5DAED724151DE300BCF665 /* KingfisherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherService.swift; sourceTree = "<group>"; };
+		1C5DAED924151FCF00BCF665 /* ImageDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataService.swift; sourceTree = "<group>"; };
 		1CC97EA92414D12C00F8A227 /* GitMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC97EAC2414D12C00F8A227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CC97EB02414D12C00F8A227 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1CC97EB52414D12E00F8A227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CC97EB82414D12E00F8A227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CC97EBA2414D12E00F8A227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CC97EC72414D79200F8A227 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1CC97EC92414D7BB00F8A227 /* SearchRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesViewController.swift; sourceTree = "<group>"; };
+		1CC97ECB2414D7C700F8A227 /* MyRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRepositoriesViewController.swift; sourceTree = "<group>"; };
+		1CC97ECD2414D7CE00F8A227 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1CC97ECF2414D8A200F8A227 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		1CC97ED32414D91C00F8A227 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1CC97ED52414D97500F8A227 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1CC97EDB2414DD2100F8A227 /* SearchRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesView.swift; sourceTree = "<group>"; };
+		1CC97EDD2414E03700F8A227 /* MyRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRepositoriesView.swift; sourceTree = "<group>"; };
+		1CC97EDF2414E04100F8A227 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		1CC97EE12414E3AF00F8A227 /* SearchRepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesViewModel.swift; sourceTree = "<group>"; };
+		1CC97EE92414E4AF00F8A227 /* MyRepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRepositoriesViewModel.swift; sourceTree = "<group>"; };
+		1CC97EEB2414E4FB00F8A227 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		1CC97EEF2414EA0F00F8A227 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		1CC97EF12414EB9C00F8A227 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		1CC97EF52414ED7400F8A227 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		1CC97EF72414F1DB00F8A227 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		1CC97EF92414F21300F8A227 /* BaseURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLs.swift; sourceTree = "<group>"; };
+		1CC97EFB2414F90900F8A227 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		885BA6440F87E29D55D8E954 /* Pods_GitMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31BBFF8F438B3A61D47989C /* Pods-GitMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitMobile.release.xcconfig"; path = "Target Support Files/Pods-GitMobile/Pods-GitMobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C5DAED624151DD100BCF665 /* Image Processing */ = {
+			isa = PBXGroup;
+			children = (
+				1C5DAED724151DE300BCF665 /* KingfisherService.swift */,
+				1C5DAED924151FCF00BCF665 /* ImageDataService.swift */,
+			);
+			path = "Image Processing";
+			sourceTree = "<group>";
+		};
 		1CC97EA02414D12C00F8A227 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +116,8 @@
 				1CC97EC32414D5C200F8A227 /* Core Layer */,
 				1CC97EC22414D59900F8A227 /* Data Layer */,
 				1CC97EC12414D59400F8A227 /* UI Layer */,
+				1CC97ED12414D8AE00F8A227 /* Utilities */,
+				1CC97ED72414DAE200F8A227 /* Resources */,
 				1CC97EC02414D13600F8A227 /* Supporting Files */,
 			);
 			path = GitMobile;
@@ -71,7 +126,6 @@
 		1CC97EC02414D13600F8A227 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1CC97EB52414D12E00F8A227 /* Assets.xcassets */,
 				1CC97EB72414D12E00F8A227 /* LaunchScreen.storyboard */,
 				1CC97EBA2414D12E00F8A227 /* Info.plist */,
 			);
@@ -81,7 +135,10 @@
 		1CC97EC12414D59400F8A227 /* UI Layer */ = {
 			isa = PBXGroup;
 			children = (
-				1CC97EB02414D12C00F8A227 /* ViewController.swift */,
+				1CC97ED22414D8CA00F8A227 /* Base */,
+				1CC97ED82414DCC500F8A227 /* Search Repositories */,
+				1CC97ED92414DCEA00F8A227 /* My Repositories */,
+				1CC97EDA2414DCF100F8A227 /* Profile */,
 			);
 			path = "UI Layer";
 			sourceTree = "<group>";
@@ -89,6 +146,8 @@
 		1CC97EC22414D59900F8A227 /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
+				1CC97EC52414D76800F8A227 /* Repositories */,
+				1CC97EC62414D76F00F8A227 /* Model */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -96,6 +155,8 @@
 		1CC97EC32414D5C200F8A227 /* Core Layer */ = {
 			isa = PBXGroup;
 			children = (
+				1C5DAED624151DD100BCF665 /* Image Processing */,
+				1CC97EFF2414FA6A00F8A227 /* Networking */,
 			);
 			path = "Core Layer";
 			sourceTree = "<group>";
@@ -106,6 +167,107 @@
 				1CC97EAC2414D12C00F8A227 /* AppDelegate.swift */,
 			);
 			path = "App Layer";
+			sourceTree = "<group>";
+		};
+		1CC97EC52414D76800F8A227 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1C5DAED12415027400BCF665 /* SearchRepositoriesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1CC97EC62414D76F00F8A227 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C5DAECF2414FFFB00BCF665 /* SearchRepositoriesResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1CC97ED12414D8AE00F8A227 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EF12414EB9C00F8A227 /* Font.swift */,
+				1CC97ED32414D91C00F8A227 /* Colors.swift */,
+				1CC97ED52414D97500F8A227 /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1CC97ED22414D8CA00F8A227 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EC72414D79200F8A227 /* TabBarController.swift */,
+				1CC97ECF2414D8A200F8A227 /* AppNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1CC97ED72414DAE200F8A227 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EB52414D12E00F8A227 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1CC97ED82414DCC500F8A227 /* Search Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EF32414EC6700F8A227 /* View */,
+				1CC97EF42414EC7500F8A227 /* View Model */,
+			);
+			path = "Search Repositories";
+			sourceTree = "<group>";
+		};
+		1CC97ED92414DCEA00F8A227 /* My Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97ECB2414D7C700F8A227 /* MyRepositoriesViewController.swift */,
+				1CC97EDD2414E03700F8A227 /* MyRepositoriesView.swift */,
+				1CC97EE92414E4AF00F8A227 /* MyRepositoriesViewModel.swift */,
+			);
+			path = "My Repositories";
+			sourceTree = "<group>";
+		};
+		1CC97EDA2414DCF100F8A227 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97ECD2414D7CE00F8A227 /* ProfileViewController.swift */,
+				1CC97EDF2414E04100F8A227 /* ProfileView.swift */,
+				1CC97EEB2414E4FB00F8A227 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1CC97EF32414EC6700F8A227 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EEF2414EA0F00F8A227 /* RepositoryTableViewCell.swift */,
+				1CC97EC92414D7BB00F8A227 /* SearchRepositoriesViewController.swift */,
+				1CC97EDB2414DD2100F8A227 /* SearchRepositoriesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CC97EF42414EC7500F8A227 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EE12414E3AF00F8A227 /* SearchRepositoriesViewModel.swift */,
+				1CC97EF52414ED7400F8A227 /* RepositoryViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		1CC97EFF2414FA6A00F8A227 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1CC97EF92414F21300F8A227 /* BaseURLs.swift */,
+				1CC97EFB2414F90900F8A227 /* Endpoints.swift */,
+				1CC97EF72414F1DB00F8A227 /* NetworkClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		FB9ABC96CDFC250D1AABDFC3 /* Pods */ = {
@@ -239,7 +401,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CC97EB12414D12C00F8A227 /* ViewController.swift in Sources */,
+				1CC97EC82414D79200F8A227 /* TabBarController.swift in Sources */,
+				1CC97EEA2414E4AF00F8A227 /* MyRepositoriesViewModel.swift in Sources */,
+				1CC97ECA2414D7BB00F8A227 /* SearchRepositoriesViewController.swift in Sources */,
+				1CC97EF22414EB9C00F8A227 /* Font.swift in Sources */,
+				1CC97ECE2414D7CF00F8A227 /* ProfileViewController.swift in Sources */,
+				1C5DAED02414FFFB00BCF665 /* SearchRepositoriesResponse.swift in Sources */,
+				1CC97EF82414F1DB00F8A227 /* NetworkClient.swift in Sources */,
+				1C5DAEDA24151FCF00BCF665 /* ImageDataService.swift in Sources */,
+				1CC97ED62414D97500F8A227 /* Extensions.swift in Sources */,
+				1C5DAED22415027400BCF665 /* SearchRepositoriesRepository.swift in Sources */,
+				1CC97ED42414D91C00F8A227 /* Colors.swift in Sources */,
+				1CC97ED02414D8A200F8A227 /* AppNavigationController.swift in Sources */,
+				1CC97EDE2414E03700F8A227 /* MyRepositoriesView.swift in Sources */,
+				1C5DAED824151DE300BCF665 /* KingfisherService.swift in Sources */,
+				1CC97EF02414EA0F00F8A227 /* RepositoryTableViewCell.swift in Sources */,
+				1CC97ECC2414D7C700F8A227 /* MyRepositoriesViewController.swift in Sources */,
+				1CC97EDC2414DD2100F8A227 /* SearchRepositoriesView.swift in Sources */,
+				1CC97EE02414E04100F8A227 /* ProfileView.swift in Sources */,
+				1CC97EFC2414F90900F8A227 /* Endpoints.swift in Sources */,
+				1CC97EE22414E3AF00F8A227 /* SearchRepositoriesViewModel.swift in Sources */,
+				1CC97EEC2414E4FB00F8A227 /* ProfileViewModel.swift in Sources */,
+				1CC97EFA2414F21300F8A227 /* BaseURLs.swift in Sources */,
+				1CC97EF62414ED7400F8A227 /* RepositoryViewModel.swift in Sources */,
 				1CC97EAD2414D12C00F8A227 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +564,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJWVGRX9VD;
 				INFOPLIST_FILE = "GitMobile/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,6 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJWVGRX9VD;
 				INFOPLIST_FILE = "GitMobile/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
