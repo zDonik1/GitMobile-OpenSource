@@ -108,22 +108,23 @@ App {
             title: qsTr("My Repos")
             icon: IconType.list
 
-            // login page lies on top of previous items and overlays if user is not logged in
-            LoginPage {
-                visible: opacity > 0
-                enabled: visible
-                opacity: dataModel.userLoggedIn ? 0 : 1 // hide if user is logged in
-
-                Behavior on opacity {  // page fade in/out
-                    NumberAnimation {
-                        duration: 250
-                    }
-                }
-            }
 
             NavigationStack {
                 Page {
                     title: qsTr("My Repositories")
+                }
+
+                // login page lies on top of previous items and overlays if user is not logged in
+                LoginPage {
+                    visible: opacity > 0
+                    enabled: visible
+                    opacity: dataModel.userLoggedIn ? 0 : 1 // hide if user is logged in
+
+                    Behavior on opacity {  // page fade in/out
+                        NumberAnimation {
+                            duration: 250
+                        }
+                    }
                 }
             }
         }
@@ -133,7 +134,7 @@ App {
             icon: IconType.user
 
             NavigationStack {
-                initialPage: ProfilePage {
+                ProfilePage {
                     // handle logout
                     onLogoutClicked: {
                         logic.logout()
@@ -141,6 +142,19 @@ App {
                         // jump to main page after logout
                         navigation.currentIndex = 0
                         navigation.currentNavigationItem.navigationStack.popAllExceptFirst()
+                    }
+                }
+
+                // login page lies on top of previous items and overlays if user is not logged in
+                LoginPage {
+                    visible: opacity > 0
+                    enabled: visible
+                    opacity: dataModel.userLoggedIn ? 0 : 1 // hide if user is logged in
+
+                    Behavior on opacity {  // page fade in/out
+                        NumberAnimation {
+                            duration: 250
+                        }
                     }
                 }
             }
