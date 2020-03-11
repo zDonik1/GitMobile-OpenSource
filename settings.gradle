@@ -1,0 +1,2 @@
+rootProject.name='GitMobile - OpenSource'
+include ':app'
