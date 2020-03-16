@@ -38,14 +38,16 @@ App {
         Theme.colors.backgroundColor = Material.background
         Theme.colors.disclosureColor = Material.background
         Theme.colors.tintColor = Material.accent
+        Theme.colors.secondaryBackgroundColor = Material.foreground
 
-        Theme.navigationBar.backgroundColor = Material.foreground
-        Theme.navigationBar.titleColor = "white"
+        Theme.navigationBar.backgroundColor
+                = Theme.colors.secondaryBackgroundColor
+        Theme.navigationBar.titleColor = Theme.colors.backgroundColor
 
-        Theme.tabBar.titleColor = Material.accent
-        Theme.tabBar.backgroundColor = Material.background
+        Theme.tabBar.titleColor = Theme.colors.tintColor
+        Theme.tabBar.backgroundColor = Theme.colors.backgroundColor
         Theme.tabBar.showIcon = true
-        Theme.tabBar.titleOffColor = Material.foreground
+        Theme.tabBar.titleOffColor = Theme.colors.textColor
     }
 
     // business logic
