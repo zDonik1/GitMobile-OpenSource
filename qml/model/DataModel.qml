@@ -13,7 +13,7 @@ Item {
     readonly property bool userLoggedIn: _.userLoggedIn
 
     // model data properties
-    readonly property alias todos: _.todos
+    readonly property alias publicRepos: _.publicRepos
     readonly property alias todoDetails: _.todoDetails
 
     // action success signals
@@ -28,25 +28,19 @@ Item {
     Connections {
         id: logicConnection
 
-        // action 1 - fetchTodos
-        onFetchTodos: {
-            // check cached value first
-            var cached = cache.getValue("todos")
-            if(cached)
-                _.todos = cached
+        onFetchPublicRepos: {
+            fetchDelay.search = search
+            fetchDelay.searchChanged = true
 
-            // load from api
-            api.getTodos(
-                        function(data) {
-                            // cache data before updating model property
-                            cache.setValue("todos",data)
-                            _.todos = data
-                        },
-                        function(error) {
-                            // action failed if no cached data
-                            if(!cached)
-                                fetchTodosFailed(error)
-                        })
+            var cached = cache.getValue("public_repos")
+            if(cached)
+                _.publicRepos = cached
+
+            if (!fetchDelay.running) {
+                _.getPublicRepos(search)
+                fetchDelay.searchChanged = false
+            }
+            fetchDelay.start();
         }
 
         // action 2 - fetchTodoDetails
@@ -131,11 +125,38 @@ Item {
         id: _
 
         // data properties
-        property var todos: []  // Array
+        property var publicRepos: []  // Array
         property var todoDetails: ({}) // Map
 
         // auth
         property bool userLoggedIn: false
 
+        function getPublicRepos(search) {
+            api.getPublicRepos(
+                        search,
+                        function(data) {
+                            // cache data before updating model property
+                            cache.setValue("public_repos",
+                                           search === "" ? data : data.items)
+                            _.publicRepos = search === "" ? data : data.items
+                        },
+                        function(error) {
+                            // action failed if no cached data
+                            if(!cached)
+                                fetchTodosFailed(error)
+                        })
+        }
+    }
+
+    Timer {
+        property bool searchChanged: false
+        property string search
+
+        id: fetchDelay
+        interval: 1000
+        onTriggered: if (searchChanged) {
+                         _.getPublicRepos(search)
+                         searchChanged = false
+                     }
     }
 }

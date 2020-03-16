@@ -18,10 +18,11 @@ Item {
     // private
     QtObject {
         id: _
-        property string todoUrl: "https://jsonplaceholder.typicode.com/todos"
+        property url url: "https://api.github.com"
 
         function fetch(url, success, error) {
-            HttpRequest.get(url)
+            console.log(encodeURI(url));
+            HttpRequest.get(encodeURI(url))
             .timeout(maxRequestTimeout)
             .then(function(res) { success(res.body) })
             .catch(function(err) { error(err) });
@@ -37,10 +38,17 @@ Item {
         }
     }
 
+
+
     // public rest api functions
 
-    function getTodos(success, error) {
-        _.fetch(_.todoUrl, success, error)
+    function getPublicRepos(search, success, error) {
+        if (search === "") {
+            _.fetch(_.url + "/repositories", success, error)
+        }
+        else {
+            _.fetch(_.url + "/search/repositories?q=" + search, success, error)
+        }
     }
 
     function getTodoById(id, success, error) {

@@ -29,7 +29,7 @@ App {
         }
 
         // fetch todo list data
-        logic.fetchTodos()
+        logic.fetchPublicRepos("")
         logic.fetchDraftTodos()
     }
 
@@ -66,6 +66,12 @@ App {
         onStoreTodoFailed: nativeUtils.displayMessageBox("Failed to store "+viewHelper.formatTitle(todo))
     }
 
+    JsonListModel {
+        id: jsonModel
+        source: dataModel.publicRepos
+        keyField: "id"
+    }
+
     // helper functions for view
     ViewHelper {
         id: viewHelper
@@ -84,10 +90,15 @@ App {
             NavigationStack {
                 ReposListPage {
                     title: qsTr("Repositories")
+                    model: jsonModel
                     delegate: RepoDelegate {
-                        imageSource: Qt.resolvedUrl("../assets/github_placeholder.png")
+                        imageSource: owner.avatar_url
                         imageSize: dp(35)
+                        repoName: name
+                        repoDescription: description
                     }
+
+                    onSearch: logic.fetchPublicRepos(term)
                 }
             }
         }

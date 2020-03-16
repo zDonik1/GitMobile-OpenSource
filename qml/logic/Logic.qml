@@ -3,7 +3,7 @@ import QtQuick 2.0
 Item {
 
     // actions
-    signal fetchTodos()
+    signal fetchPublicRepos(string search)
 
     signal fetchTodoDetails(int id)
 
