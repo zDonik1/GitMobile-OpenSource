@@ -98,7 +98,7 @@ App {
                         repoDescription: description
                     }
 
-                    onSearch: logic.fetchPublicRepos(term)
+                    onAccepted: logic.fetchPublicRepos(search)
                 }
             }
         }

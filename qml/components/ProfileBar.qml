@@ -52,7 +52,7 @@ Item {
             right: root.right
         }
         height: borderThickness
-        color: Theme.colors.secondaryBackgroundColor
+        color: Theme.dividerColor
     }
 }
 
