@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>assets/github_placeholder.png</file>
         <file>assets/repo.svg</file>
+        <file>assets/myprofile.jpg</file>
     </qresource>
 </RCC>

@@ -11,7 +11,7 @@ Item {
     property alias imageSize: icon.height
     property alias imageColor: colorOverlay.color
     property bool colorize: false
-    property int padding: 10
+    property int padding: dp(10)
 
     height: content.height + padding * 2
     anchors {

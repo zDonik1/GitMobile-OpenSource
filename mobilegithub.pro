@@ -62,5 +62,6 @@ macx {
 }
 
 DISTFILES += \
+    qml/components/ProfileBar.qml \
     qml/components/RepoDelegate.qml \
     qml/pages/ReposListPage.qml
