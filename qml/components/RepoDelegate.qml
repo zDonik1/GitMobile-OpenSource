@@ -46,24 +46,35 @@ Item {
         anchors {
             verticalCenter: parent.verticalCenter
             left: imageHolder.right
+            right: parent.right
         }
         height: textName.height + textName.height
 
         AppText {
-            anchors.top: parent.top
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: parent.right
+            }
             id: textName
             text: qsTr(repoName)
             fontSize: 19
-            elide: "ElideRight"
+            elide: Text.ElideRight
+            maximumLineCount: 1
         }
 
         AppText {
             id: textDescription
-            anchors.top: textName.bottom
+            anchors {
+                top: textName.bottom
+                left: parent.left
+                right: parent.right
+            }
             text: qsTr(repoDescription)
             fontSize: 15
             color: Qt.lighter(Theme.colors.textColor)
-            elide: "ElideRight"
+            elide: Text.ElideRight
+            maximumLineCount: 1
         }
     }
 }
