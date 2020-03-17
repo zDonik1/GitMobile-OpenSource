@@ -66,18 +66,11 @@ App {
         onStoreTodoFailed: nativeUtils.displayMessageBox("Failed to store "+viewHelper.formatTitle(todo))
     }
 
-    JsonListModel {
-        id: jsonModel
-        source: dataModel.publicRepos
-        keyField: "id"
-    }
-
     // helper functions for view
     ViewHelper {
         id: viewHelper
     }
 
-    // view
     Navigation {
         id: navigation
         navigationMode: navigationModeTabs
@@ -88,9 +81,13 @@ App {
             icon: IconType.search
 
             NavigationStack {
+                navigationBar.rightBarItem: ActivityIndicatorBarItem {
+                    visible: dataModel.isBusy
+                }
+
                 ReposListPage {
                     title: qsTr("Repositories")
-                    model: jsonModel
+                    model: dataModel.publicRepos
                     delegate: RepoDelegate {
                         imageSource: owner.avatar_url
                         imageSize: dp(35)

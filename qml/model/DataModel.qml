@@ -13,7 +13,7 @@ Item {
     readonly property bool userLoggedIn: _.userLoggedIn
 
     // model data properties
-    readonly property alias publicRepos: _.publicRepos
+    readonly property alias publicRepos: jsonPublicReposModel
     readonly property alias todoDetails: _.todoDetails
 
     // action success signals
@@ -142,10 +142,16 @@ Item {
                         },
                         function(error) {
                             // action failed if no cached data
-                            if(!cached)
+                            if(!cache.getValue("public_repos"))
                                 fetchTodosFailed(error)
                         })
         }
+    }
+
+    JsonListModel {
+        id: jsonPublicReposModel
+        source: _.publicRepos
+        keyField: "id"
     }
 
     Timer {

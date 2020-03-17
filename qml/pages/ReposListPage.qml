@@ -12,7 +12,10 @@ Page {
     SearchBar {
         id: searchBar
         showDivider: true
-        onAccepted: root.accepted(text)
+        onAccepted: {
+            root.accepted(text)
+            listView.positionViewAtBeginning()
+        }
     }
 
     AppListView {
