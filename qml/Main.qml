@@ -5,6 +5,7 @@ import "model"
 import "logic"
 import "pages"
 import "components"
+import "private"
 
 
 App {
@@ -31,6 +32,16 @@ App {
         // fetch todo list data
         logic.fetchPublicRepos("")
         logic.fetchDraftTodos()
+
+        if (settings.getValue("code") === undefined)
+            settings.setValue("code", "")
+
+        if (!dataModel.userSignedIn)
+            authPage.url = "https://github.com/login/oauth/authorize?client_id="
+                    + PrivateSettings.clientId
+
+        console.log("main: " + dataModel.userSignedIn)
+        console.log("main: " + dataModel.token)
     }
 
     onInitTheme: {
@@ -101,8 +112,10 @@ App {
         }
 
         NavigationItem {
+            id: navItemMyRepos
             title: qsTr("My Repos")
             icon: IconType.list
+
 
             NavigationStack {
                 ReposListPage {
@@ -112,51 +125,34 @@ App {
                         imageSize: dp(25)
                     }
                 }
-
-                // login page lies on top of previous items and overlays if user is not logged in
-                LoginPage {
-                    visible: opacity > 0
-                    enabled: visible
-                    opacity: dataModel.userLoggedIn ? 0 : 1 // hide if user is logged in
-
-                    Behavior on opacity {  // page fade in/out
-                        NumberAnimation {
-                            duration: 250
-                        }
-                    }
-                }
             }
         }
 
         NavigationItem {
+            id: navItemProfile
             title: qsTr("Profile") // use qsTr for strings you want to translate
             icon: IconType.user
 
             NavigationStack {
                 ProfilePage {
-                    // handle logout
                     onLogoutClicked: {
                         logic.logout()
-
-                        // jump to main page after logout
                         navigation.currentIndex = 0
                         navigation.currentNavigationItem.navigationStack.popAllExceptFirst()
                     }
                 }
-
-                // login page lies on top of previous items and overlays if user is not logged in
-                LoginPage {
-                    visible: opacity > 0
-                    enabled: visible
-                    opacity: dataModel.userLoggedIn ? 0 : 1 // hide if user is logged in
-
-                    Behavior on opacity {  // page fade in/out
-                        NumberAnimation {
-                            duration: 250
-                        }
-                    }
-                }
             }
         }
+    }
+
+    GithubOAuthPage {
+        id: authPage
+        x: navItemMyRepos.page.x
+        y: navItemMyRepos.page.y
+        width: navItemMyRepos.page.width
+        height: navItemMyRepos.page.height
+        opacity: navigation.currentIndex === 1 || navigation.currentIndex === 2
+                 ? dataModel.userSignedIn ? 0 : 1
+                 : 0
     }
 }

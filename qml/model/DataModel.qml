@@ -2,15 +2,12 @@ import QtQuick 2.0
 import Felgo 3.0
 
 Item {
-
-    // property to configure target dispatcher / logic
     property alias dispatcher: logicConnection.target
+    property alias userSignedIn: _.userSignedIn
+    property alias token: _.token
 
     // whether api is busy (ongoing network requests)
     readonly property bool isBusy: api.busy
-
-    // whether a user is logged in
-    readonly property bool userLoggedIn: _.userLoggedIn
 
     // model data properties
     readonly property alias publicRepos: jsonPublicReposModel
@@ -99,11 +96,24 @@ Item {
             cache.clearAll()
         }
 
-        // action 5 - login
-        onLogin: _.userLoggedIn = true
+        onSignIn: {
+            api.postSignInCode(code,
+                               function(data) {
+                                   console.log(data)
+                                   var tokenIndex = data.lastIndexOf("access_token=") + 13
+                                   if (tokenIndex !== 12) {
+                                       var token = data.substring(tokenIndex, tokenIndex + 40)
+                                       cache.setValue("token", token)
+                                       _.token = token
+                                   }
+                                   _.userSignedIn = true
+                               },
+                               function(error) {
+                                   console.log("error while singing in")
+                               })
+        }
 
-        // action 6 - logout
-        onLogout: _.userLoggedIn = false
+        onLogout: _.token = ""
     }
 
     // you can place getter functions here that do not modify the data
@@ -112,7 +122,7 @@ Item {
     // rest api for data access
     RestAPI {
         id: api
-        maxRequestTimeout: 3000 // use max request timeout of 3 sec
+        maxRequestTimeout: 10000
     }
 
     // storage for caching
@@ -122,14 +132,16 @@ Item {
 
     // private
     Item {
+        property var publicRepos: []
+        property var todoDetails: ({})
+
+        property bool userSignedIn: false
+        property string token: cache.getValue("token") !== undefined
+                               ? cache.getValue("token") : ""
+
         id: _
 
-        // data properties
-        property var publicRepos: []  // Array
-        property var todoDetails: ({}) // Map
-
-        // auth
-        property bool userLoggedIn: false
+        Component.onCompleted: userSignedIn = _.token !== ""
 
         function getPublicRepos(search) {
             api.getPublicRepos(

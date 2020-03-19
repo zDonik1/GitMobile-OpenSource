@@ -1,4 +1,4 @@
-QT += svg
+QT += svg webview
 
 # allows to add DEPLOYMENTFOLDERS and links to the Felgo library and QtCreator auto-completion
 CONFIG += felgo
@@ -42,7 +42,6 @@ RESOURCES += resources.qrc # uncomment for publishing
 # The .cpp file which was generated for your project. Feel free to hack it.
 SOURCES += main.cpp
 
-
 android {
     ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
     OTHER_FILES += android/AndroidManifest.xml       android/build.gradle
@@ -62,6 +61,9 @@ macx {
 }
 
 DISTFILES += \
+    qml/pages/GithubOAuthPage.qml \
+    qml/private/qmldir \
+    qml/private/PrivateSettings.qml \
     qml/components/ProfileBar.qml \
     qml/components/RepoDelegate.qml \
     qml/pages/ReposListPage.qml

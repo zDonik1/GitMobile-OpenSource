@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Felgo 3.0
+import "../private"
 
 Item {
 
@@ -29,7 +30,8 @@ Item {
         }
 
         function post(url, data, success, error) {
-            HttpRequest.post(url)
+            console.log(encodeURI(url));
+            HttpRequest.post(encodeURI(url))
             .timeout(maxRequestTimeout)
             .set('Content-Type', 'application/json')
             .send(data)
@@ -37,7 +39,6 @@ Item {
             .catch(function(err) { error(err) });
         }
     }
-
 
 
     // public rest api functions
@@ -51,8 +52,14 @@ Item {
         }
     }
 
-    function getTodoById(id, success, error) {
-        _.fetch(_.todoUrl+"/"+id, success, error)
+    function postSignInCode(code, success, error) {
+        _.post("https://github.com/login/oauth/access_token",
+               {
+                   client_id: PrivateSettings.clientId,
+                   client_secret: PrivateSettings.clientSecret,
+                   code: code
+               },
+               success, error)
     }
 
     function addTodo(todo, success, error) {

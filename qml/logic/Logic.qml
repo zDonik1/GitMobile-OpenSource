@@ -13,7 +13,7 @@ Item {
 
     signal clearCache()
 
-    signal login(string username, string password)
+    signal signIn(string code)
 
     signal logout()
 
